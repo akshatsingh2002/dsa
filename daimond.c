@@ -20,8 +20,10 @@ int main(){
             printf(" ");
 
         }
-        for(j=1;j<=2*i-1;j++){
+        for(j=2*i-1;j>0;j--){
+            
             printf("%d",j);
+    
         }
         printf("\n");
     }
