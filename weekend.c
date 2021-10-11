@@ -28,4 +28,5 @@ scanf("%d",&i);
     printf("Sunday\n");
         break;
     }
+    return 0;
 }
