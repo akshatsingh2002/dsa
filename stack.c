@@ -1,5 +1,5 @@
 #include<stdio.h>
-int top,stack[5],maxtack=5,item;
+int top,stack[5],maxtack=5,item,i;
 void push(){
     if(top==maxtack){
         printf("Over flow :(");
@@ -10,8 +10,9 @@ while(top<maxtack){
     scanf("%d",&stack[top]);
     top++;
 }
-top=0;
+
 printf("\nThe stack is :");
+top=0;
 while(top<maxtack){
     printf("%d",stack[top]);
     top++;
@@ -23,11 +24,11 @@ void pop(){
     }
     else 
     while(top>0){
-        item=stack[top];
+        stack[top]==item;
         top--;
     }
-    top=0;
 printf("\nThe stack is :");
+top=0;
 while(top<maxtack){
     printf("%d",stack[top]);
     top++;
@@ -36,12 +37,12 @@ while(top<maxtack){
     
 }
 void peep(){
-    printf("%d",stack[top]);
+    printf("Element at top position is %d ",stack[top-1]);
 }
 int main(){
  int n;
  while(1){
- printf("1. for push\n 2. for pop\n 3. for peep\n 4. for exit");
+ printf("\n1. for push\n 2. for pop\n 3. for peep\n 4. for exit");
  scanf("%d",&n);
  switch(n){
      case 1:push();
@@ -50,7 +51,7 @@ int main(){
      break;
       case 3:peep();
      break;
-      case 4:return 0;
+      default:return 0;
      break;
  }
  }
