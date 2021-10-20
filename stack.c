@@ -24,7 +24,7 @@ void pop(){
     }
     else 
     while(top>0){
-        stack[top]==item;
+        item=stack[top];
         top--;
     }
 printf("\nThe stack is :");
