@@ -34,7 +34,7 @@ void peep(){
 int main(){
  int n;
  while(1){
- printf("\n1. for push\n 2. for pop\n 3. for peep\n 4. for exit");
+ printf("\n1. for push\n 2. for pop\n 3. for peep\n 4. for \n");
  scanf("%d",&n);
  switch(n){
      case 1:push();
