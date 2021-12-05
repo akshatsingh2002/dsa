@@ -23,7 +23,7 @@ void insert(){
 }
 void display(){
     printf("The queue is \n");
-    while(i<=r){
+    while(i<r){
         printf("%d",que[i]);
         i++;
     }

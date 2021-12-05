@@ -6,8 +6,10 @@ int fact(int num){
     else if (num==1)
     return 1;
     else
-    while(num>1)
+    while(num>1){
     return(num*fact(num-1));
+    }9
+    
 
 
 }
