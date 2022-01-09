@@ -9,9 +9,12 @@ void insert(){
   scanf("%d",&value);
   if(f==-1)
       f=r=0;
-      else
+      else{
+          f=1;
       r=(r+1)%max;
   que[r]=value;
+  printf("front=%d\trear=%d",f,r);
+      }
 }
 
 void deletion(){
@@ -48,15 +51,13 @@ void display(){
 }
 
 int main(){
-    int a=0;
-    char b;
+    int a=0,b;
     printf("Enter the size for the circular queue");
-    scanf("%d",&value);
+    scanf("%d",&max);
     printf("\n1.For Entering\n2.For Deleting\n3.For Display\n4.For Exit\n");
     while(a==0){
         scanf("%d",&b);
-        printf("%d\t",b);
-        switch(b)
+        switch (b)
         {
         case 1:insert(); 
             break;
