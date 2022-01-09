@@ -1,31 +1,34 @@
 #include<stdio.h>
-int f=0,r=0,que[10],value,max,i;
+int f=-1,r=-1,que[10],value,max,i;
 void insert(){
   if(f==(r+1)%max){
       printf("\nOverflow");
   }
-  else 
+  
+  else {
   printf("\nEnter the value");
   scanf("%d",&value);
   if(f==-1)
       f=r=0;
-      else{
-          f=1;
+      else
       r=(r+1)%max;
   que[r]=value;
   printf("front=%d\trear=%d",f,r);
-      }
+      
+}
 }
 
 void deletion(){
    if(f==-1)
    printf("\nUnderflow");
-   else
+   else{
    value=que[f];
-   if(f=r)
+   if(f==r)
    f=r=-1;
    else 
    f=(f+1)%max;
+   }
+   printf("\nfront=%d\trear=%d",f,r);
 
 }
 void display(){
