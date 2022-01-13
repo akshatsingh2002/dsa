@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<malloc.h>
 #include<stdlib.h>
-#include<string>
+#include<string.h>
 struct node{
     int data;
     struct node *next;
@@ -26,7 +26,7 @@ void main(){
         case 2:display();
             break;
             case 3:printf("\nEnter a new node itm in the beginning of the list\n");
-        sanf("%d",&num);
+        scanf("%d",&num);
         add(num);
             break;
             case 4:printf("\nEnter the number you want to remove");
@@ -60,20 +60,20 @@ if(start==NULL){
 void display(){
     struct node *q;
     if(start==NULL){
-        pirntf("\nList in empty");
+        printf("\nList in empty");
     }
     else{
         printf("\nThe item in the list :");
-        for(q=start;Q!=NULL;q=q->next){
-            printf("%d",q->data);
+        for(q=start;q!=NULL;q=q->next){
+            printf("%d ",q->data);
         }
     }
 }
 void add(int num){
-    sturct node *q;
+    struct node *q;
      q=(struct node*)malloc(sizeof(struct node));
         q->data=num;
-        t->next=start;
+        q->next=start;
         start=q;
 }
 void del(int num){
@@ -81,25 +81,26 @@ void del(int num){
     q=start;
     if(q==NULL){
         printf("\nThe list is empty");
-        return 0;
+        
     }
-    if(q->data=num){
+    else if(q->data=num){
         start=q->next;
-        pirntf("\nElement removed");
+        printf("\nElement removed");
         free(q);
-        return 0;
-    }
     t=q;
     q=q->next;
+    }
+    else{
     while(q!=NULL){
         if(q->data==num){
         t->next=q->next;
         printf("\nItem removed");
         free(q);
-        return 0;
+        
     }
     t=q;
     q=q->next;
     }
     printf("\nItem is not found");
+    }
 }
