@@ -26,6 +26,7 @@ void main(){
         case 2:printf("\npoped item is %d",pop());
         break;
         case 3:printf("\nStack display");
+       display();
         break;
         default:exit(0);
             break;
