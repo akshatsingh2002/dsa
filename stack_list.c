@@ -47,15 +47,15 @@ int pop(){
     printf("\nStack is underflow");
     else{
     x=top->info;
-    top=top->next;
+   
     free(top);
-    
+     top=top->next;
     return x;
     }
     return 0;
 }
 void display(){
-    node *i;
+     node *i;
     for(i=top;i!=NULL;i=i->next){
         printf("%d",i->info);
     }
