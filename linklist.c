@@ -12,7 +12,7 @@ void add(int);
 void del(int);
 void main(){
     int i,ch,pos,num;
-    start==NULL;
+    start=NULL;
     while(1){
         printf("\n1.Create\n2.Display\n3.Add\n4.Delete\n5.Exit");
         printf("\nEnter your choice");
