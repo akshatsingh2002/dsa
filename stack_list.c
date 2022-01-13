@@ -43,13 +43,16 @@ void push(int item){
 }
 int pop(){
     int x;
+    node *ptr;
     if(top==NULL)
     printf("\nStack is underflow");
     else{
     x=top->info;
+    ptr=top;
+    top=top->next;
    
-    free(top);
-     top=top->next;
+    free(ptr);
+     
     return x;
     }
     return 0;
