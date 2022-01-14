@@ -83,24 +83,26 @@ void del(int num){
         printf("\nThe list is empty");
         
     }
-    else if(q->data=num){
+    else if(q->data==num){
         start=q->next;
         printf("\nElement removed");
+        
         free(q);
+    }
     t=q;
     q=q->next;
-    }
-    else{
+    
+    
     while(q!=NULL){
         if(q->data==num){
-        t->next=q->next;
-        printf("\nItem removed");
-        free(q);
-        
+            t->next=q->next;
+            printf("\nItem removed");
+            free(q);
+            break;
+        }
+        t=q;
+        q=q->next;
     }
-    t=q;
-    q=q->next;
-    }
-    printf("\nItem is not found");
-    }
+    else
+    printf("\nItem not found");
 }
