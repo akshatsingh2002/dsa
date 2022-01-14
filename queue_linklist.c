@@ -14,14 +14,14 @@ void display();
 void main(){
     int ch,item;
     while(1){
-        printf("1.Enque\n2.Deque\n3.Display\n4.Exit");
+        printf("\n1.Enque\n2.Deque\n3.Display\n4.Exit");
         printf("\nEnter your choice");
         scanf("%d",&ch);
         switch (ch)
         {
         case 1:printf("\nEnter the element");
         scanf("%d",&item);
-        enque(item;)
+        enque(item);
             break;
             case 2:deque();
             break;
@@ -34,7 +34,7 @@ void main(){
 }
 void enque(int item){
     nd *n;
-    n=(nd*)malloc(sixeof(nd));
+    n=(nd*)malloc(sizeof(nd));
     n->info=item;
     n->link=NULL;
     if(r==NULL){
