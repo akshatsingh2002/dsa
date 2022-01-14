@@ -9,7 +9,7 @@ typedef struct node nd;
 nd *f=NULL;
 nd *r=NULL;
 void enque(int);
-vodid deque();
+void deque();
 void display();
 void main(){
     int ch,item;
