@@ -11,13 +11,13 @@ int binarySearch(vector<int> arr, int val)
         if(arr.at(mid)==val){
             return mid;
         }
-        else if(arr.at(mid)<val){
-            r = mid - 1;
+        else if(arr.at(mid)>val){
+            r = mid ;
         }
         else{
-            l = mid + 1;
+            l = mid ;
         }
-        mid = l + r / 2;
+        mid = (l + r) / 2;
     }
     return -1 ;
 }
